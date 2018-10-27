@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+nltk
+wordcloud
+sklearn
+elasticsearch
+datetime
+scipy
+pytz
