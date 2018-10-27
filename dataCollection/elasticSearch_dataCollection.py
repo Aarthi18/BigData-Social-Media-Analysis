@@ -3,7 +3,7 @@ from datetime import timedelta, datetime
 import numpy as np
 import numpy.random
 import pandas as pd
-
+from settings import weblink
 
 def dataCollection(start_time):
     #origin = datetime(2018, 7, 19, 20, 0, 0)
@@ -15,7 +15,7 @@ def dataCollection(start_time):
     #print("******", "Extracting tweets for hour", start_time, "******", sep=" ")
     gte = start_time.strftime("%Y-%m-%dT%H:%M:%S")
     lt = (start_time + timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%S")
-    es = Elasticsearch("http://54.242.41.222:9200/")
+    es = Elasticsearch(weblink)
     doc = {
         'size': 10000,
         'query': {
